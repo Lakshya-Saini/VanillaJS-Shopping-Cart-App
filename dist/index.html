@@ -1,0 +1,394 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Store | Fashion like never before</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <!-- Preloader -->
+
+    <div class="preloader">
+      <img src="./assets/img/preloader.gif" />
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">Fashion Store</a>
+      <div class="ml-auto">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop by Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="shopping-cart-icon nav-link"
+              ><i class="fas fa-shopping-cart"></i
+              ><sup class="cartItemsCount">0</sup></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-0">
+      <div class="row mx-0">
+        <!---------- Main Content ----------->
+        <div class="col-md-12 px-0 main-content">
+          <div class="row mx-0">
+            <div class="col-md-12 px-0">
+              <!-- Hero Section -->
+              <div class="hero-section">
+                <div class="row mx-0">
+                  <div class="col-md-6">
+                    <div class="hero-section-text">
+                      <h3>New Fashion Collection</h3>
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Ut asperiores dicta voluptatem suscipit inventore
+                        exercitationem non, quam corporis.
+                      </p>
+                      <button class="btn shadow-none">Shop Now</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <div class="hero-section-image">
+                      <img src="./assets/img/hero.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mx-0">
+            <div class="col-md-10 mx-auto px-0">
+              <!-- Products -->
+              <div class="products">
+                <h5>Featured Products</h5>
+                <div class="row mx-0 products-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---------- Cart Content ----------->
+        <div class="col-md-12 px-0 cart-content">
+          <div class="row mx-0">
+            <div class="col-md-12">
+              <div class="products-in-cart">
+                <h5>Your Shopping Cart</h5>
+                <div class="row mx-0">
+                  <div class="col-md-8 pl-0">
+                    <div class="cartProducts"></div>
+                    <h5 class="noProductsInCart">No Product(s)</h5>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="checkoutProducts">
+                      <form class="mb-0">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control shadow-none promocode"
+                              placeholder="Promocode eg. NEWPROMO"
+                            />
+                            <div class="input-group-append">
+                              <button
+                                class="btn btn-secondary apply-promocode shadow-none"
+                                type="button"
+                              >
+                                Apply
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mx-0">
+                          <div class="col-md-6 pl-0">
+                            <h6>Item Subtotal</h6>
+                          </div>
+                          <div class="col-md-6 pr-0">
+                            <h6 class="itemSubtotal">0</h6>
+                          </div>
+                        </div>
+                        <div class="row mx-0">
+                          <div class="col-md-6 pl-0">
+                            <h6>Your Savings</h6>
+                          </div>
+                          <div class="col-md-6 pr-0">
+                            <h6 class="savings">0</h6>
+                          </div>
+                        </div>
+                        <div class="row mx-0">
+                          <div class="col-md-6 pl-0">
+                            <h5>Total</h5>
+                          </div>
+                          <div class="col-md-6 pr-0">
+                            <h5 class="grandTotal">0</h5>
+                          </div>
+                        </div>
+                        <div class="form-group mb-0">
+                          <input
+                            type="button"
+                            value="Proceed to checkout"
+                            class="btn btn-block shadow-none proceed-to-checkout-btn"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---------- Checkout Products ------------>
+        <div class="col-md-11 mx-auto px-0 checkout-page">
+          <div class="row mx-0">
+            <div class="col-md-12">
+              <h5>Checkout</h5>
+            </div>
+            <div class="col-md-6">
+              <div class="customer-info">
+                <h6>Fill in your details</h6>
+                <form class="mb-0" id="submit-details-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="fullName"
+                      class="form-control shadow-none"
+                      placeholder="Full Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="email"
+                      class="form-control shadow-none"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      id="phoneNumber"
+                      class="form-control shadow-none"
+                      placeholder="Phone Number (optional)"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="address"
+                      class="form-control shadow-none"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="row mx-0">
+                      <div class="col-md-6 px-0">
+                        <input
+                          type="text"
+                          id="city"
+                          class="form-control shadow-none"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div class="col-md-6 pr-0">
+                        <input
+                          type="number"
+                          id="pinCode"
+                          class="form-control shadow-none"
+                          placeholder="Pin Code"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <select id="country" class="form-control shadow-none">
+                      <option value="">Select Country</option>
+                      <option value="India">India</option>
+                      <option value="USA">USA</option>
+                      <option value="Australia">Australia</option>
+                      <option value="UK">UK</option>
+                      <option value="France">France</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-0">
+                    <input
+                      type="submit"
+                      value="Submit Details"
+                      class="btn btn-secondary shadow-none submit-details-btn"
+                    />
+                  </div>
+                </form>
+              </div>
+              <hr />
+              <div class="payment-details">
+                <h6>Payment Method</h6>
+                <div class="row mx-0">
+                  <div class="col-md-3 px-0">
+                    <button type="button" id="card">
+                      <img src="./assets/img/card.png" alt="card" />
+                    </button>
+                  </div>
+                  <div class="col-md-3 px-0">
+                    <button type="button" id="upi">
+                      <img src="./assets/img/upi.png" alt="upi" />
+                    </button>
+                  </div>
+                  <div class="col-md-3 px-0">
+                    <button type="button" id="paytm">
+                      <img src="./assets/img/paytm.png" alt="paytm" />
+                    </button>
+                  </div>
+                  <div class="col-md-3 px-0">
+                    <button type="button" id="gpay">
+                      <img src="./assets/img/gpay.png" alt="gpay" />
+                    </button>
+                  </div>
+                </div>
+                <div class="card-details">
+                  <h6>Card Details</h6>
+                  <form class="mb-0 card-details-form">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="nameOnCard"
+                        class="form-control shadow-none"
+                        placeholder="Name on Card"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        id="cardNumber"
+                        class="form-control shadow-none"
+                        placeholder="Card Number"
+                        maxlength="19"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <div class="row mx-0">
+                        <div class="col-md-6 px-0">
+                          <input
+                            type="text"
+                            id="expiryDate"
+                            class="form-control shadow-none"
+                            placeholder="Expire On"
+                            maxlength="7"
+                          />
+                        </div>
+                        <div class="col-md-6 pr-0">
+                          <input
+                            type="password"
+                            id="cvv"
+                            class="form-control shadow-none"
+                            placeholder="CVV"
+                            maxlength="3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mb-0">
+                      <input
+                        type="submit"
+                        value="Make Payment"
+                        class="btn btn-secondary shadow-none make-payment-btn"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="upi-details">
+                  <h6>UPI Details</h6>
+                  <form class="mb-0 upi-details-form">
+                    <div class="form-group">
+                      <input
+                        type="number"
+                        id="upiNumber"
+                        class="form-control shadow-none"
+                        placeholder="Your UPI Number ( eg. your_number@paytm )"
+                      />
+                    </div>
+                    <div class="form-group mb-0">
+                      <input
+                        type="submit"
+                        value="Make Payment"
+                        class="btn btn-secondary shadow-none make-payment-btn"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="paytm-details">
+                  <h6>Paytm Details</h6>
+                  <form class="mb-0 paytm-details-form">
+                    <div class="form-group">
+                      <input
+                        type="number"
+                        id="paytmNumber"
+                        class="form-control shadow-none"
+                        placeholder="Your Paytm Number"
+                      />
+                    </div>
+                    <div class="form-group mb-0">
+                      <input
+                        type="submit"
+                        value="Make Payment"
+                        class="btn btn-secondary shadow-none make-payment-btn"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="gpay-details">
+                  <h6>Google Pay Details</h6>
+                  <form class="mb-0 gpay-details-form">
+                    <div class="form-group">
+                      <input
+                        type="number"
+                        id="gpayNumber"
+                        class="form-control shadow-none"
+                        placeholder="Your Google Pay Number"
+                      />
+                    </div>
+                    <div class="form-group mb-0">
+                      <input
+                        type="submit"
+                        value="Make Payment"
+                        class="btn btn-secondary shadow-none make-payment-btn"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="order-summary">
+                <h6>Order Summary</h6>
+                <div class="order-summary-details"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script src="./assets/js/firebase.js"></script>
+    <script src="./assets/bundle.js"></script>
+  </body>
+</html>
